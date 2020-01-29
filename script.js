@@ -1,26 +1,29 @@
-var APIKey = q7cYqjgdTWrVYAfzuD6z9MIXvZOKKHzv
-
-var userQuery = "&q=" + ""//key word input of user
-
-var startYear = "&begin_date=" + ""//userinput
-    + "0101"
-
-var endYear = "&end_date=" + "" //userinput 
-    + "1231"
+$("button").click(function () {
 
 
 
-var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + APIKey + userQuery + startYear + endYear
-// Parameters go heres
-""
+    var APIKey = q7cYqjgdTWrVYAfzuD6z9MIXvZOKKHzv
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-})
-    .then(function (response) {
+    var userQuery = "&q=" + $("#searchTerm").val() //key word input of user
 
-        var numOfRecords = "" // User Input
+    var startYear = "&begin_date=" + $("#startYear").val()//userinput
+        + "0101"
+
+    var endYear = "&end_date=" + $("#endYear").val()//userinput 
+        + "1231"
+
+
+
+    var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + APIKey + userQuery + startYear + endYear
+    // Parameters go heres
+    ""
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+
+        var numOfRecords = $("numOfArticles").val();
 
         for (var i = 0; i < numOfRecords; i++) {
 
@@ -33,6 +36,8 @@ $.ajax({
             articleDump.prepend(headline);
 
 
-        })
+        }
 
 
+    })
+})
