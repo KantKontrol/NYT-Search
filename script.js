@@ -28,7 +28,7 @@ $("button").click(function () {
         for (var i = 0; i < numOfRecords; i++) {
 
             var articleDump = $("#articleDump")
-            var headline = $("<div>").html("<a href=response[i].web_url>response[i].abstract</a>")
+            var headline = $("<div>").html("<a href=" + response[i].web_url + ">" + response[i].abstract + "</a>")
             var description = $("<div>").text(response[i].lead_paragraph)
 
 
