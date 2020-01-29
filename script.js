@@ -10,7 +10,7 @@ var endYear = "&end_date=" + "" //userinput
 
 
 
-var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?apikey=" + APIKey + userQuery + startYear + endYear
+var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + APIKey + userQuery + startYear + endYear
 // Parameters go heres
 ""
 
@@ -22,13 +22,17 @@ $.ajax({
 
         var numOfRecords = "" // User Input
 
-        for (var i = 0; i < numOfRecords, i++) {
+        for (var i = 0; i < numOfRecords; i++) {
 
-            // Where will this show up?
-            response[i];
+            var articleDump = $("#articleDump")
+            var headline = $("<div>").html("<a href=response[i].web_url>response[i].abstract</a>")
+            var description = $("<div>").text(response[i].lead_paragraph)
 
-        }
 
-    })
+            articleDump.prepend(description);
+            articleDump.prepend(headline);
+
+
+        })
 
 
