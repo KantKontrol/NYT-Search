@@ -1,8 +1,8 @@
-$("button").click(function () {
+$("button").click(function (e) {
 
+    e.preventDefault();
 
-
-    var APIKey = q7cYqjgdTWrVYAfzuD6z9MIXvZOKKHzv
+    var APIKey = "q7cYqjgdTWrVYAfzuD6z9MIXvZOKKHzv"
 
     var userQuery = "&q=" + $("#searchTerm").val() //key word input of user
 
@@ -14,9 +14,9 @@ $("button").click(function () {
 
 
 
-    var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + APIKey + userQuery + startYear + endYear
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + APIKey + userQuery + startYear + endYear
     // Parameters go heres
-    ""
+
 
     $.ajax({
         url: queryURL,
