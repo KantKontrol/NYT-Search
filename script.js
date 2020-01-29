@@ -1,8 +1,10 @@
 var APIKey = q7cYqjgdTWrVYAfzuD6z9MIXvZOKKHzv
 
-var search = ""//input of user
+var search = "&fq=" + ""//key word input of user
 
-var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?apikey=" + APIKey + "&fq=" + search
+var article = "&_id=" + ""//article user input
+
+var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?apikey=" + APIKey + search + article
 // Parameters go heres
 ""
 
