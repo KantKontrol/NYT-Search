@@ -4,3 +4,11 @@ h1 {
     padding: 70px;
     text-align: center;
 }
+
+h4 {
+    color: blue;
+}
+
+.margin-space {
+    margin: 5px;
+}
