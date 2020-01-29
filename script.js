@@ -6,7 +6,7 @@ $.ajax({
     url: queryURL,
     method: "GET"
 })
-    .then(function (renponse) {
+    .then(function (response) {
 
     })
 
